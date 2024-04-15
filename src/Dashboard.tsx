@@ -57,7 +57,7 @@ const Dashboard: React.FC = () => {
 
   const handleEditClick = (item: IDataItem) => {
     setEditItem(item);
-    setEditedValue(item.name); // Set the edited value to the name of the item
+    setEditedValue(item.name); 
     setEditModalOpen(true);
   };
 
@@ -69,7 +69,7 @@ const Dashboard: React.FC = () => {
   const handleSaveEdit = () => {
     const updatedData = data.map((item) => {
       if (item === editItem) {
-        return { ...item, name: editedValue }; // Update the 'name' column specifically
+        return { ...item, name: editedValue }; 
       }
       return item;
     });
@@ -106,7 +106,7 @@ const Dashboard: React.FC = () => {
             </div>
           )}
 
-          {/* Render Delete Modal */}
+      
           {deleteModalOpen && (
             <div className="delete-modal">
               <p>Are you sure you want to delete this item?</p>
@@ -115,7 +115,7 @@ const Dashboard: React.FC = () => {
             </div>
           )}
 
-          {/* Render User Cards */}
+          
           <div className="user-cards">
             {data.map((item) => (
               <div className="user-card" key={item.id}>
